@@ -1,0 +1,22 @@
+pipeline:
+  name: test
+  identifier: test
+  projectIdentifier: default_project
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: test
+        identifier: test
+        description: ""
+        type: Pipeline
+        spec:
+          org: default
+          pipeline: Snowflake
+          project: default_project
+          inputs:
+            identifier: Snowflake
+            properties:
+              ci:
+                codebase:
+                  build: <+input>
