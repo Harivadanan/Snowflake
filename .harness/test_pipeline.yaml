@@ -1,0 +1,32 @@
+pipeline:
+  name: test_pipeline
+  identifier: test_pipeline
+  projectIdentifier: TEST_PROJECT
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: stg1
+        identifier: stg1
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: ShellScript
+                  name: ShellScript_1
+                  identifier: ShellScript_1
+                  spec:
+                    shell: Bash
+                    executionTarget: {}
+                    source:
+                      type: Inline
+                      spec:
+                        script: |
+                          curl -O https://sfc-repo.snowflakecomputing.com/snowsql/bootstrap/1.2/linux_x86_64/snowsql-1.2.14-linux_x86_64.bash
+                          sudo bash snowsql-1.2.14-linux_x86_64.bash
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: 10m
+        tags: {}
