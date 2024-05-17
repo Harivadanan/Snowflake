@@ -1,0 +1,5 @@
+service:
+  name: test_serv
+  identifier: test_serv
+  orgIdentifier: default
+  projectIdentifier: TEST_PROJECT
