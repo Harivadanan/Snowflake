@@ -29,4 +29,7 @@ pipeline:
                     environmentVariables: []
                     outputVariables: []
                   timeout: 10m
+          environment:
+            environmentRef: Nonprod
+            deployToAll: false
         tags: {}
