@@ -1,0 +1,7 @@
+environment:
+  name: Non-prod
+  identifier: Nonprod
+  accountId: rtXUoXq4RyCUzUITgh-38g
+  orgIdentifier: default
+  projectIdentifier: TEST_PROJECT
+  type: PreProduction
